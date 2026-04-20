@@ -52,14 +52,14 @@ public class RedisSessionCleanupService {
         if (config.isCronEnabled()) {
             scheduleCleanup(config.getCronExpression());
             try {
-                log.info("RedisSessionCleanupService is enabled for host {}", InetAddress.getLocalHost().getAddress());
+                log.info("RedisSessionCleanupService is enabled for host {}", InetAddress.getLocalHost().getHostName());
             } catch (UnknownHostException e) {
                 log.info("RedisSessionCleanupService is enabled");
                 log.error(couldNotGetHost);
             }
         } else {
             try {
-                log.info("RedisSessionCleanupService is disabled for host {}", InetAddress.getLocalHost().getAddress());
+                log.info("RedisSessionCleanupService is disabled for host {}", InetAddress.getLocalHost().getHostName());
             } catch (UnknownHostException e) {
                 log.info("RedisSessionCleanupService is disabled");
                 log.error(couldNotGetHost);
