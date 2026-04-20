@@ -73,12 +73,13 @@ public class RedisSessionCleanupService {
     }
 
     public void runCleanup() {
-        log.info("RedisSessionCleanupService begin run cleanup");
+        log.info("RedisSessionCleanupService run cleanup started");
         Set<String> principals = getAllPrincipals();
         log.debug("RedisSessionCleanupService principals : {} ", principals);
         for (String principal : principals) {
             cleanupPrincipal(principal);
         }
+        log.info("RedisSessionCleanupService run cleanup ended");
     }
 
     private void cleanupPrincipal(String principalName) {
