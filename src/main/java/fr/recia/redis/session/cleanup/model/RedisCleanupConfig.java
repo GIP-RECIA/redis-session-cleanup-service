@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package fr.recia.model;
+package fr.recia.redis.session.cleanup.model;
 
 import lombok.Getter;
 

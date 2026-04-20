@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package fr.recia.core;
+package fr.recia.redis.session.cleanup.service;
 
-import fr.recia.model.RedisCleanupConfig;
+import fr.recia.redis.session.cleanup.model.RedisCleanupConfig;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.scheduling.TaskScheduler;
